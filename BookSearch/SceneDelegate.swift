@@ -19,9 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let scene = (scene as? UIWindowScene) else { return }
 
     window = UIWindow(windowScene: scene)
-    let vc = UIViewController() // TODO: RootViewController 수정
-    vc.view.backgroundColor = .red
-    window?.rootViewController = vc
+    window?.rootViewController = HomeViewController()
     window?.makeKeyAndVisible()
   }
 
