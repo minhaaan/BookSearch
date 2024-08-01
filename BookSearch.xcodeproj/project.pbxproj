@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
-		E917DE082C5BE029005C35F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE072C5BE029005C35F1 /* ViewController.swift */; };
-		E917DE0B2C5BE029005C35F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E917DE092C5BE029005C35F1 /* Main.storyboard */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
 		E917DE102C5BE029005C35F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0E2C5BE029005C35F1 /* LaunchScreen.storyboard */; };
 		E917DE1B2C5BE029005C35F1 /* BookSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */; };
@@ -24,27 +22,17 @@
 			remoteGlobalIDString = E917DDFF2C5BE029005C35F1;
 			remoteInfo = BookSearch;
 		};
-		E917DE212C5BE02A005C35F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E917DDF82C5BE029005C35F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E917DDFF2C5BE029005C35F1;
-			remoteInfo = BookSearch;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E917DE072C5BE029005C35F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E917DE0A2C5BE029005C35F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E917DE0C2C5BE029005C35F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E917DE0F2C5BE029005C35F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E917DE112C5BE029005C35F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E917DE162C5BE029005C35F1 /* BookSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTests.swift; sourceTree = "<group>"; };
-		E917DE202C5BE02A005C35F1 /* BookSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +44,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E917DE132C5BE029005C35F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E917DE1D2C5BE02A005C35F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,7 +67,6 @@
 			children = (
 				E917DE002C5BE029005C35F1 /* BookSearch.app */,
 				E917DE162C5BE029005C35F1 /* BookSearchTests.xctest */,
-				E917DE202C5BE02A005C35F1 /* BookSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,8 +76,6 @@
 			children = (
 				E917DE032C5BE029005C35F1 /* AppDelegate.swift */,
 				E917DE052C5BE029005C35F1 /* SceneDelegate.swift */,
-				E917DE072C5BE029005C35F1 /* ViewController.swift */,
-				E917DE092C5BE029005C35F1 /* Main.storyboard */,
 				E917DE0C2C5BE029005C35F1 /* Assets.xcassets */,
 				E917DE0E2C5BE029005C35F1 /* LaunchScreen.storyboard */,
 				E917DE112C5BE029005C35F1 /* Info.plist */,
@@ -151,24 +129,6 @@
 			productReference = E917DE162C5BE029005C35F1 /* BookSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E917DE1F2C5BE02A005C35F1 /* BookSearchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E917DE302C5BE02A005C35F1 /* Build configuration list for PBXNativeTarget "BookSearchUITests" */;
-			buildPhases = (
-				E917DE1C2C5BE02A005C35F1 /* Sources */,
-				E917DE1D2C5BE02A005C35F1 /* Frameworks */,
-				E917DE1E2C5BE02A005C35F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E917DE222C5BE02A005C35F1 /* PBXTargetDependency */,
-			);
-			name = BookSearchUITests;
-			productName = BookSearchUITests;
-			productReference = E917DE202C5BE02A005C35F1 /* BookSearchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,10 +143,6 @@
 						CreatedOnToolsVersion = 15.1;
 					};
 					E917DE152C5BE029005C35F1 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = E917DDFF2C5BE029005C35F1;
-					};
-					E917DE1F2C5BE02A005C35F1 = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = E917DDFF2C5BE029005C35F1;
 					};
@@ -207,7 +163,6 @@
 			targets = (
 				E917DDFF2C5BE029005C35F1 /* BookSearch */,
 				E917DE152C5BE029005C35F1 /* BookSearchTests */,
-				E917DE1F2C5BE02A005C35F1 /* BookSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,18 +174,10 @@
 			files = (
 				E917DE102C5BE029005C35F1 /* LaunchScreen.storyboard in Resources */,
 				E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */,
-				E917DE0B2C5BE029005C35F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E917DE142C5BE029005C35F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E917DE1E2C5BE02A005C35F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -244,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E917DE082C5BE029005C35F1 /* ViewController.swift in Sources */,
 				E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */,
 				E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -258,13 +204,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E917DE1C2C5BE02A005C35F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -273,22 +212,9 @@
 			target = E917DDFF2C5BE029005C35F1 /* BookSearch */;
 			targetProxy = E917DE172C5BE029005C35F1 /* PBXContainerItemProxy */;
 		};
-		E917DE222C5BE02A005C35F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E917DDFF2C5BE029005C35F1 /* BookSearch */;
-			targetProxy = E917DE212C5BE02A005C35F1 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E917DE092C5BE029005C35F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E917DE0A2C5BE029005C35F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E917DE0E2C5BE029005C35F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -352,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -409,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -431,7 +357,6 @@
 				INFOPLIST_FILE = BookSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,7 +384,6 @@
 				INFOPLIST_FILE = BookSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,42 +439,6 @@
 			};
 			name = Release;
 		};
-		E917DE312C5BE02A005C35F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T8JF3V3RR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.minan.BookSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BookSearch;
-			};
-			name = Debug;
-		};
-		E917DE322C5BE02A005C35F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7T8JF3V3RR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.minan.BookSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BookSearch;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,15 +465,6 @@
 			buildConfigurations = (
 				E917DE2E2C5BE02A005C35F1 /* Debug */,
 				E917DE2F2C5BE02A005C35F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E917DE302C5BE02A005C35F1 /* Build configuration list for PBXNativeTarget "BookSearchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E917DE312C5BE02A005C35F1 /* Debug */,
-				E917DE322C5BE02A005C35F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
