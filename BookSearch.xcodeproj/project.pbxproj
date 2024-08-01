@@ -14,8 +14,6 @@
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
 		E917DE102C5BE029005C35F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0E2C5BE029005C35F1 /* LaunchScreen.storyboard */; };
 		E917DE1B2C5BE029005C35F1 /* BookSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */; };
-		E917DE252C5BE02A005C35F1 /* BookSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE242C5BE02A005C35F1 /* BookSearchUITests.swift */; };
-		E917DE272C5BE02A005C35F1 /* BookSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE262C5BE02A005C35F1 /* BookSearchUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +45,6 @@
 		E917DE162C5BE029005C35F1 /* BookSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTests.swift; sourceTree = "<group>"; };
 		E917DE202C5BE02A005C35F1 /* BookSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E917DE242C5BE02A005C35F1 /* BookSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchUITests.swift; sourceTree = "<group>"; };
-		E917DE262C5BE02A005C35F1 /* BookSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +77,6 @@
 			children = (
 				E917DE022C5BE029005C35F1 /* BookSearch */,
 				E917DE192C5BE029005C35F1 /* BookSearchTests */,
-				E917DE232C5BE02A005C35F1 /* BookSearchUITests */,
 				E917DE012C5BE029005C35F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,15 +111,6 @@
 				E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */,
 			);
 			path = BookSearchTests;
-			sourceTree = "<group>";
-		};
-		E917DE232C5BE02A005C35F1 /* BookSearchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E917DE242C5BE02A005C35F1 /* BookSearchUITests.swift */,
-				E917DE262C5BE02A005C35F1 /* BookSearchUITestsLaunchTests.swift */,
-			);
-			path = BookSearchUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E917DE252C5BE02A005C35F1 /* BookSearchUITests.swift in Sources */,
-				E917DE272C5BE02A005C35F1 /* BookSearchUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
