@@ -10,6 +10,9 @@
 		E9081F262C5CC1FB0086685D /* BookRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F252C5CC1FB0086685D /* BookRepositoryTests.swift */; };
 		E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F282C5CC2560086685D /* MockURLProtocol.swift */; };
 		E9081F2B2C5CC5500086685D /* SearchResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F2A2C5CC5500086685D /* SearchResponseMock.swift */; };
+		E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */; };
+		E9081F312C5CD0840086685D /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F302C5CD0840086685D /* HomeListView.swift */; };
+		E9081F342C5CD1340086685D /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F332C5CD1340086685D /* DefaultLabel.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		E9081F252C5CC1FB0086685D /* BookRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryTests.swift; sourceTree = "<group>"; };
 		E9081F282C5CC2560086685D /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		E9081F2A2C5CC5500086685D /* SearchResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseMock.swift; sourceTree = "<group>"; };
+		E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewCell.swift; sourceTree = "<group>"; };
+		E9081F302C5CD0840086685D /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		E9081F332C5CD1340086685D /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,23 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		E9081F2D2C5CCE900086685D /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */,
+				E9081F302C5CD0840086685D /* HomeListView.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		E9081F322C5CD12E0086685D /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F332C5CD1340086685D /* DefaultLabel.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
 		E917DDF72C5BE029005C35F1 = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +158,7 @@
 		E917DE352C5BE2A9005C35F1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				E917DE3D2C5CB9E4005C35F1 /* DTO */,
+				E9081F322C5CD12E0086685D /* CommonUI */,
 				E917DE362C5BE2B0005C35F1 /* Home */,
 			);
 			path = Screens;
@@ -144,6 +167,7 @@
 		E917DE362C5BE2B0005C35F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F2D2C5CCE900086685D /* ListView */,
 				E917DE372C5BE2C1005C35F1 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -152,6 +176,7 @@
 		E917DE392C5CB9B6005C35F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E917DE3D2C5CB9E4005C35F1 /* DTO */,
 				E917DE402C5CBAE6005C35F1 /* Network */,
 				E917DE3A2C5CB9B9005C35F1 /* Repository */,
 			);
@@ -292,7 +317,10 @@
 				E917DE3C2C5CB9C0005C35F1 /* BookRepository.swift in Sources */,
 				E917DE462C5CBB8D005C35F1 /* Provider.swift in Sources */,
 				E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */,
+				E9081F312C5CD0840086685D /* HomeListView.swift in Sources */,
+				E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */,
 				E917DE422C5CBAEC005C35F1 /* BookApi.swift in Sources */,
+				E9081F342C5CD1340086685D /* DefaultLabel.swift in Sources */,
 				E917DE442C5CBB0D005C35F1 /* TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
