@@ -40,6 +40,7 @@ final class ImageLoaderTests: XCTestCase {
     let _ = try await imageLoader.loadImage(from: dummyURL)
 
     // THEN
+    XCTAssert(imageCache.valueUrlCalled) // 캐시 조회했는가
     XCTAssert(true) // 이미지 불러오기 성공
   }
 
