@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class ImageLoader {
+protocol ImageLoadable {
+  func loadImage(from url: URL) async throws -> UIImage
+}
+
+final class ImageLoader: ImageLoadable {
 
   enum ImageLoaderError: Error {
     case convertUIImageError // Data -> UIImage 타입변환 불가

@@ -27,7 +27,7 @@ final class DetailInteractor: DetailPresentableListener {
 
   private let isbn: String
   private let bookRepo: BookRepository
-  private let imageLoader: ImageLoader
+  private let imageLoader: ImageLoadable
 
   weak var presenter: DetailPresentable?
 
@@ -36,7 +36,7 @@ final class DetailInteractor: DetailPresentableListener {
   init(
     isbn: String,
     bookRepo: BookRepository,
-    imageLoader: ImageLoader
+    imageLoader: ImageLoadable
   ) {
     self.isbn = isbn
     self.bookRepo = bookRepo
@@ -66,6 +66,7 @@ final class DetailInteractor: DetailPresentableListener {
         await presenter?.addPdfView(pdfDocument: pdfDocument)
       }
     }
+
   }
 
   /// PDF Document 생성
