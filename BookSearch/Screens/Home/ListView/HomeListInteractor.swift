@@ -81,16 +81,15 @@ final class HomeListInteractor: HomeListPresentableListener {
   func willDisplay(query: String, indexPath: IndexPath) async {
     guard
       let curPage = pageData?.curPage, // 현재 페이지
-      let totalPage = pageData?.totalPage // 전체 페이지
+      let totalPage = pageData?.totalPage, // 전체 페이지
+      curPage <= (totalPage / 10) + 1,
+      indexPath.row == books.count - 1
     else {
       return
     }
 
-    if curPage <= (totalPage / 10) + 1 &&
-        indexPath.row == books.count - 1 {
-      // 다음 페이지 조회
-      try? await fetchNextPage(query: query, nextPage: curPage + 1)
-    }
+    // 다음 페이지 조회
+    try? await fetchNextPage(query: query, nextPage: curPage + 1)
   }
   
   /// 다음 페이지 조회
