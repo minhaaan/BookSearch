@@ -19,7 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let scene = (scene as? UIWindowScene) else { return }
 
     window = UIWindow(windowScene: scene)
-    window?.rootViewController = HomeViewController()
+    let homeDependency = HomeDependency(
+      repository: BookRepositoryImpl()
+    )
+    let homeBuilder = HomeBuilder(depdendency: homeDependency)
+    window?.rootViewController = homeBuilder.build()
     window?.makeKeyAndVisible()
   }
 
