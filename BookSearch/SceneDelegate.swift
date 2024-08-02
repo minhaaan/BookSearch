@@ -19,9 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let scene = (scene as? UIWindowScene) else { return }
 
     window = UIWindow(windowScene: scene)
+    let repository = BookRepositoryImpl()
+    let imageLoader = ImageLoader()
     let homeDependency = HomeDependency(
-      repository: BookRepositoryImpl(),
-      imageLoader: ImageLoader()
+      repository: repository,
+      imageLoader: imageLoader,
+      detailBuilder: DetailBuilder(
+        dependency: DetailDependency(
+          repository: repository,
+          imageLoader: imageLoader
+        )
+      )
     )
     let homeBuilder = HomeBuilder(depdendency: homeDependency)
     window?.rootViewController = homeBuilder.build()

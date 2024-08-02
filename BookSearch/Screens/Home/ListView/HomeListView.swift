@@ -12,6 +12,7 @@ protocol HomeListPresentableListener: AnyObject {
   var imageLoader: ImageLoader { get }
 
   func updateQuery(query: String) async
+  func didSelectItemAt(indexPath: IndexPath) async
   func willDisplay(query: String, indexPath: IndexPath) async
 }
 
@@ -133,6 +134,12 @@ extension HomeListView: UICollectionViewDelegate {
     Task {
       guard let query = searchBar.text else { return }
       await listener?.willDisplay(query: query, indexPath: indexPath)
+    }
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    Task {
+      await listener?.didSelectItemAt(indexPath: indexPath)
     }
   }
 }

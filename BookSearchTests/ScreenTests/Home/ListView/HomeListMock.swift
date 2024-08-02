@@ -48,6 +48,12 @@ final class HomeListPresentableListenerMock: HomeListPresentableListener {
     willDisplayQueryIndexPathReceivedInvocations.append((query: query, indexPath: indexPath))
     willDisplayQueryIndexPathClosure?(query, indexPath)
   }
+
+  // MARK: - didSelectItemAt
+  var didSelectItemAtCallsCount = 0
+  func didSelectItemAt(indexPath: IndexPath) async {
+    didSelectItemAtCallsCount += 1
+  }
 }
 
 // MARK: - HomeListPresentableMock -
@@ -68,3 +74,24 @@ final class HomeListPresentableMock: HomeListPresentable {
   }
 }
 
+// MARK: - HomeListListenerMock -
+
+final class HomeListListenerMock: HomeListListener {
+
+  // MARK: - routeDetail
+
+  var routeDetailIsbn13CallsCount = 0
+  var routeDetailIsbn13Called: Bool {
+    routeDetailIsbn13CallsCount > 0
+  }
+  var routeDetailIsbn13ReceivedIsbn13: String?
+  var routeDetailIsbn13ReceivedInvocations: [String] = []
+  var routeDetailIsbn13Closure: ((String) -> Void)?
+
+  func routeDetail(isbn13: String) async {
+    routeDetailIsbn13CallsCount += 1
+    routeDetailIsbn13ReceivedIsbn13 = isbn13
+    routeDetailIsbn13ReceivedInvocations.append(isbn13)
+    routeDetailIsbn13Closure?(isbn13)
+  }
+}

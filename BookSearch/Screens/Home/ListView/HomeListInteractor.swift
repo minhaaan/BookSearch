@@ -8,6 +8,7 @@
 import UIKit
 
 protocol HomeListListener: AnyObject {
+  func routeDetail(isbn13: String) async
 }
 
 protocol HomeListPresentable: AnyObject {
@@ -25,6 +26,7 @@ final class HomeListInteractor: HomeListPresentableListener {
 
   // MARK: Properties
 
+  weak var listener: HomeListListener?
   weak var presenter: HomeListPresentable?
 
   private let bookRepo: BookRepository
@@ -74,6 +76,15 @@ final class HomeListInteractor: HomeListPresentableListener {
     }
   }
   
+  /// 셀 선택됨
+  /// - Parameter indexPath: 선택된 셀의 IndexPath
+  func didSelectItemAt(indexPath: IndexPath) async {
+    guard let isbn13 = books[safe: indexPath.row]?.isbn13 else { return }
+    await listener?.routeDetail(isbn13: isbn13)
+  }
+
+  // MARK: PageNation
+
   /// 셀 표시될때 호출되는 함수
   /// - Parameters:
   ///   - query: 현재 검색어
@@ -109,6 +120,7 @@ final class HomeListInteractor: HomeListPresentableListener {
   }
 
 }
+
 
 
 

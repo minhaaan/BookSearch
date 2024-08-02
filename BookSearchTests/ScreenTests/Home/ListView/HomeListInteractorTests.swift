@@ -13,17 +13,20 @@ final class HomeListInteractorTests: XCTestCase {
   var interactor: HomeListInteractor!
   var bookRepo: BookRepositoryMock!
   var presenter: HomeListPresentableMock!
+  var listener: HomeListListenerMock!
   var exp: XCTestExpectation!
 
   override func setUpWithError() throws {
     exp = XCTestExpectation()
     bookRepo = BookRepositoryMock()
     presenter = HomeListPresentableMock()
+    listener = HomeListListenerMock()
     interactor = HomeListInteractor(
       bookRepo: bookRepo,
       imageLoader: ImageLoader(),
       debouncer: DebouncerMock()
     )
+    interactor.listener = listener
     interactor.presenter = presenter
   }
 
@@ -97,6 +100,17 @@ final class HomeListInteractorTests: XCTestCase {
 
     // THEN
     XCTAssert(bookRepo.searchPageQueryPageCallsCount == 0)
+  }
+
+  func test_Cell_선택됐을떄_routeDetail_호출되는가() async {
+    // GIVEN
+    await interactor.updateQuery(query: "123") // 내부 Books 설정
+
+    // WHEN
+    await interactor.didSelectItemAt(indexPath: IndexPath(row: 0, section: 0)) // 선택
+
+    // THEN
+    XCTAssert(listener.routeDetailIsbn13CallsCount == 1)
   }
 
 

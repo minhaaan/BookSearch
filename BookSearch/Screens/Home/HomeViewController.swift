@@ -1,5 +1,9 @@
 import UIKit
 
+protocol HomeRoutable: AnyObject {
+  func presentDetail(isbn13: String)
+}
+
 protocol HomePresentableListener: AnyObject {
 }
 
@@ -7,6 +11,7 @@ final class HomeViewController: UIViewController, HomePresentable {
 
   // MARK: Properties
 
+  var router: HomeRoutable?
   var listener: HomePresentableListener?
 
   // MARK: Layout Props
@@ -35,7 +40,9 @@ final class HomeViewController: UIViewController, HomePresentable {
 
   // MARK: Method
 
-  // MARK: Private Method
+  func routeDetail(isbn13: String) async {
+    router?.presentDetail(isbn13: isbn13)
+  }
 
   // MARK: Layout Method
 

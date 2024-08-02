@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "D271106D-51CA-4D5F-A5DE-31BF82DC773D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BookSearch.xcodeproj",
+      "identifier" : "E917DDFF2C5BE029005C35F1",
+      "name" : "BookSearch"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:BookSearch.xcodeproj",
+        "identifier" : "E917DE152C5BE029005C35F1",
+        "name" : "BookSearchTests"
+      }
+    }
+  ],
+  "version" : 1
+}
