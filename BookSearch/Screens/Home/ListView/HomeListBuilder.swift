@@ -32,7 +32,8 @@ final class HomeListBuilder {
       imageLoader: dependency.imageLoader
     )
     interactor.presenter = listView
-    
+    interactor.listener = listener
+
     listView.listener = interactor
 
     return listView

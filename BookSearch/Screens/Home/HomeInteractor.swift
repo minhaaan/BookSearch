@@ -8,6 +8,7 @@
 import UIKit
 
 protocol HomePresentable: AnyObject {
+  func routeDetail(isbn13: String) async
 }
 
 final class HomeInteractor: HomePresentableListener, HomeListListener {
@@ -21,6 +22,10 @@ final class HomeInteractor: HomePresentableListener, HomeListListener {
   init() {}
 
   // MARK: Method
+
+  func routeDetail(isbn13: String) async {
+    await presenter?.routeDetail(isbn13: isbn13)
+  }
 
 }
 
