@@ -31,6 +31,23 @@ final class HomeListPresentableListenerMock: HomeListPresentableListener {
     updateQueryQueryReceivedInvocations.append(query)
     updateQueryQueryClosure?(query)
   }
+
+  // MARK: - willDisplay
+
+  var willDisplayQueryIndexPathCallsCount = 0
+  var willDisplayQueryIndexPathCalled: Bool {
+    willDisplayQueryIndexPathCallsCount > 0
+  }
+  var willDisplayQueryIndexPathReceivedArguments: (query: String, indexPath: IndexPath)?
+  var willDisplayQueryIndexPathReceivedInvocations: [(query: String, indexPath: IndexPath)] = []
+  var willDisplayQueryIndexPathClosure: ((String, IndexPath) -> Void)?
+
+  func willDisplay(query: String, indexPath: IndexPath) async {
+    willDisplayQueryIndexPathCallsCount += 1
+    willDisplayQueryIndexPathReceivedArguments = (query: query, indexPath: indexPath)
+    willDisplayQueryIndexPathReceivedInvocations.append((query: query, indexPath: indexPath))
+    willDisplayQueryIndexPathClosure?(query, indexPath)
+  }
 }
 
 // MARK: - HomeListPresentableMock -
