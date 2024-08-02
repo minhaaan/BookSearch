@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeListPresentableListener: AnyObject {
   var books: [SearchDTO.Book] { get }
+  var imageLoader: ImageLoader { get }
   func updateQuery(query: String) async
 }
 
@@ -115,7 +116,10 @@ extension HomeListView: UICollectionViewDataSource {
     else {
       return UICollectionViewCell()
     }
-    cell.updateCellData(book: book)
+    cell.updateCellData(
+      book: book,
+      imageLoader: listener?.imageLoader ?? ImageLoader()
+    )
     return cell
   }
 }

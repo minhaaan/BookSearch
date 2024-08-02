@@ -21,6 +21,7 @@ final class HomeListInteractorTests: XCTestCase {
     presenter = HomeListPresentableMock()
     interactor = HomeListInteractor(
       bookRepo: bookRepo,
+      imageLoader: ImageLoader(),
       debouncer: DebouncerMock()
     )
     interactor.presenter = presenter

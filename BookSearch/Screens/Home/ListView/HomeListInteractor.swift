@@ -24,15 +24,18 @@ final class HomeListInteractor: HomeListPresentableListener {
 
   private let debouncer: Debouncer
 
+  let imageLoader: ImageLoader
   var books: [SearchDTO.Book] = []
 
   // MARK: init
 
   init(
     bookRepo: BookRepository,
+    imageLoader: ImageLoader,
     debouncer: Debouncer = DebouncerImpl()
   ) {
     self.bookRepo = bookRepo
+    self.imageLoader = imageLoader
     self.debouncer = debouncer
   }
 

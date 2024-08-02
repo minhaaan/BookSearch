@@ -37,7 +37,7 @@ final class ImageLoaderTests: XCTestCase {
     imageLoader = ImageLoader(session: .shared, imageCache: imageCache)
 
     // WHEN
-    let image = try await imageLoader.loadImage(from: dummyURL)
+    let _ = try await imageLoader.loadImage(from: dummyURL)
 
     // THEN
     XCTAssert(true) // 이미지 불러오기 성공
@@ -53,7 +53,7 @@ final class ImageLoaderTests: XCTestCase {
     }
 
     // WHEN
-    let image = try await imageLoader.loadImage(from: dummyURL)
+    let _ = try await imageLoader.loadImage(from: dummyURL)
 
     // THEN
     // 캐시 미스되어서 이미지 다운로드 했을때 이미지 저장해야함

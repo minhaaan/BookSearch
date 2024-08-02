@@ -9,6 +9,7 @@ import UIKit
 
 struct HomeListViewDependency {
   let repository: BookRepository
+  let imageLoader: ImageLoader
 }
 
 final class HomeListBuilder {
@@ -27,7 +28,8 @@ final class HomeListBuilder {
   func build() -> UIView {
     let listView = HomeListView()
     let interactor = HomeListInteractor(
-      bookRepo: dependency.repository
+      bookRepo: dependency.repository,
+      imageLoader: dependency.imageLoader
     )
     interactor.presenter = listView
     

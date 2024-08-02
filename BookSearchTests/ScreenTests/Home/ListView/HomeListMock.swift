@@ -13,6 +13,7 @@ import Foundation
 
 final class HomeListPresentableListenerMock: HomeListPresentableListener {
   var books: [SearchDTO.Book] = []
+  var imageLoader: ImageLoader = .init()
 
   // MARK: - updateQuery
 
