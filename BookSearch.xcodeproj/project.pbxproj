@@ -13,11 +13,21 @@
 		E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */; };
 		E9081F312C5CD0840086685D /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F302C5CD0840086685D /* HomeListView.swift */; };
 		E9081F342C5CD1340086685D /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F332C5CD1340086685D /* DefaultLabel.swift */; };
+		E9081F362C5CD22E0086685D /* HomeListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F352C5CD22E0086685D /* HomeListBuilder.swift */; };
+		E9081F382C5CD2960086685D /* HomeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F372C5CD2960086685D /* HomeListInteractor.swift */; };
+		E9081F3C2C5CD47E0086685D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F3B2C5CD47E0086685D /* HomeBuilder.swift */; };
+		E9081F3E2C5CD4D00086685D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F3D2C5CD4D00086685D /* HomeInteractor.swift */; };
+		E9081F412C5CE8940086685D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F402C5CE8940086685D /* Debouncer.swift */; };
+		E9081F462C5CE8EC0086685D /* HomeListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */; };
+		E9081F482C5CE9F80086685D /* HomeListMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F472C5CE9F80086685D /* HomeListMock.swift */; };
+		E9081F4A2C5CEBD80086685D /* HomeListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */; };
+		E9081F4C2C5CEC500086685D /* BookRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */; };
+		E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */; };
+		E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4F2C5CF3F90086685D /* DebouncerTests.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
 		E917DE102C5BE029005C35F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0E2C5BE029005C35F1 /* LaunchScreen.storyboard */; };
-		E917DE1B2C5BE029005C35F1 /* BookSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */; };
 		E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE372C5BE2C1005C35F1 /* HomeViewController.swift */; };
 		E917DE3C2C5CB9C0005C35F1 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE3B2C5CB9C0005C35F1 /* BookRepository.swift */; };
 		E917DE3F2C5CBA65005C35F1 /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE3E2C5CBA65005C35F1 /* SearchDTO.swift */; };
@@ -44,6 +54,17 @@
 		E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewCell.swift; sourceTree = "<group>"; };
 		E9081F302C5CD0840086685D /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		E9081F332C5CD1340086685D /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
+		E9081F352C5CD22E0086685D /* HomeListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListBuilder.swift; sourceTree = "<group>"; };
+		E9081F372C5CD2960086685D /* HomeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListInteractor.swift; sourceTree = "<group>"; };
+		E9081F3B2C5CD47E0086685D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		E9081F3D2C5CD4D00086685D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E9081F402C5CE8940086685D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
+		E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewTests.swift; sourceTree = "<group>"; };
+		E9081F472C5CE9F80086685D /* HomeListMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListMock.swift; sourceTree = "<group>"; };
+		E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListInteractorTests.swift; sourceTree = "<group>"; };
+		E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryMock.swift; sourceTree = "<group>"; };
+		E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebouncerMock.swift; sourceTree = "<group>"; };
+		E9081F4F2C5CF3F90086685D /* DebouncerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebouncerTests.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +72,6 @@
 		E917DE0F2C5BE029005C35F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E917DE112C5BE029005C35F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E917DE162C5BE029005C35F1 /* BookSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchTests.swift; sourceTree = "<group>"; };
 		E917DE372C5BE2C1005C35F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E917DE3B2C5CB9C0005C35F1 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		E917DE3E2C5CBA65005C35F1 /* SearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
@@ -82,6 +102,7 @@
 		E9081F212C5CC1D40086685D /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */,
 				E9081F2A2C5CC5500086685D /* SearchResponseMock.swift */,
 				E9081F252C5CC1FB0086685D /* BookRepositoryTests.swift */,
 			);
@@ -101,6 +122,8 @@
 			children = (
 				E9081F2E2C5CCE9A0086685D /* HomeListViewCell.swift */,
 				E9081F302C5CD0840086685D /* HomeListView.swift */,
+				E9081F352C5CD22E0086685D /* HomeListBuilder.swift */,
+				E9081F372C5CD2960086685D /* HomeListInteractor.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -111,6 +134,41 @@
 				E9081F332C5CD1340086685D /* DefaultLabel.swift */,
 			);
 			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		E9081F3F2C5CE88E0086685D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F402C5CE8940086685D /* Debouncer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E9081F422C5CE8CA0086685D /* ScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F432C5CE8D20086685D /* Home */,
+			);
+			path = ScreenTests;
+			sourceTree = "<group>";
+		};
+		E9081F432C5CE8D20086685D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F442C5CE8DF0086685D /* ListView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E9081F442C5CE8DF0086685D /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */,
+				E9081F472C5CE9F80086685D /* HomeListMock.swift */,
+				E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */,
+				E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */,
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 		E917DDF72C5BE029005C35F1 = {
@@ -134,6 +192,7 @@
 		E917DE022C5BE029005C35F1 /* BookSearch */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F3F2C5CE88E0086685D /* Utils */,
 				E917DE392C5CB9B6005C35F1 /* Domain */,
 				E917DE352C5BE2A9005C35F1 /* Screens */,
 				E917DE032C5BE029005C35F1 /* AppDelegate.swift */,
@@ -148,9 +207,10 @@
 		E917DE192C5BE029005C35F1 /* BookSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F4F2C5CF3F90086685D /* DebouncerTests.swift */,
+				E9081F422C5CE8CA0086685D /* ScreenTests */,
 				E9081F272C5CC2490086685D /* Helper */,
 				E9081F212C5CC1D40086685D /* DomainTests */,
-				E917DE1A2C5BE029005C35F1 /* BookSearchTests.swift */,
 			);
 			path = BookSearchTests;
 			sourceTree = "<group>";
@@ -169,6 +229,8 @@
 			children = (
 				E9081F2D2C5CCE900086685D /* ListView */,
 				E917DE372C5BE2C1005C35F1 /* HomeViewController.swift */,
+				E9081F3B2C5CD47E0086685D /* HomeBuilder.swift */,
+				E9081F3D2C5CD4D00086685D /* HomeInteractor.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -313,13 +375,18 @@
 				E917DE3F2C5CBA65005C35F1 /* SearchDTO.swift in Sources */,
 				E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */,
 				E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */,
+				E9081F3E2C5CD4D00086685D /* HomeInteractor.swift in Sources */,
+				E9081F382C5CD2960086685D /* HomeListInteractor.swift in Sources */,
 				E917DE482C5CC05E005C35F1 /* DetailDTO.swift in Sources */,
 				E917DE3C2C5CB9C0005C35F1 /* BookRepository.swift in Sources */,
 				E917DE462C5CBB8D005C35F1 /* Provider.swift in Sources */,
 				E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */,
 				E9081F312C5CD0840086685D /* HomeListView.swift in Sources */,
 				E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */,
+				E9081F362C5CD22E0086685D /* HomeListBuilder.swift in Sources */,
 				E917DE422C5CBAEC005C35F1 /* BookApi.swift in Sources */,
+				E9081F3C2C5CD47E0086685D /* HomeBuilder.swift in Sources */,
+				E9081F412C5CE8940086685D /* Debouncer.swift in Sources */,
 				E9081F342C5CD1340086685D /* DefaultLabel.swift in Sources */,
 				E917DE442C5CBB0D005C35F1 /* TargetType.swift in Sources */,
 			);
@@ -329,10 +396,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9081F4C2C5CEC500086685D /* BookRepositoryMock.swift in Sources */,
+				E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */,
 				E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */,
+				E9081F4A2C5CEBD80086685D /* HomeListInteractorTests.swift in Sources */,
 				E9081F262C5CC1FB0086685D /* BookRepositoryTests.swift in Sources */,
+				E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */,
+				E9081F462C5CE8EC0086685D /* HomeListViewTests.swift in Sources */,
 				E9081F2B2C5CC5500086685D /* SearchResponseMock.swift in Sources */,
-				E917DE1B2C5BE029005C35F1 /* BookSearchTests.swift in Sources */,
+				E9081F482C5CE9F80086685D /* HomeListMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
