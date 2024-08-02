@@ -13,6 +13,8 @@ final class HomeListViewCell: UICollectionViewCell {
 
   static let ID = String(describing: HomeListViewCell.self)
 
+  private var imageDownloadTask: Task<Void, Never>?
+
   // MARK: Layout Props
 
   private let titleLabel = DefaultLabel()
@@ -46,18 +48,27 @@ final class HomeListViewCell: UICollectionViewCell {
       $0.text = nil
     }
     imageView.image = nil
+    imageDownloadTask?.cancel() // 이미지 다운로드 태스크 취소
   }
 
   // MARK: Method
   
   /// 셀 데이터 업데이트
-  func updateCellData(book: SearchDTO.Book) {
+  func updateCellData(book: SearchDTO.Book, imageLoader: ImageLoader) {
     titleLabel.text = book.title
     subtitleLabel.text = book.subtitle
     isbnLabel.text = book.isbn13
     priceLabel.text = book.price
-    // TODO: Image 로딩
-    imageView.image = UIImage(systemName: "flame")
+    
+    imageDownloadTask?.cancel() // 기존 이미지 다운로드 태스크 취소
+    if let imageURL = URL(string: book.image) {
+      imageDownloadTask = Task { [weak self] in
+        let image = try? await imageLoader.loadImage(from: imageURL)
+        guard Task.isCancelled == false else { return } // 취소된 작업이라면 변경하지 않음
+        self?.imageView.image = image
+      }
+    }
+
     urlLabel.text = book.url
   }
 
@@ -76,7 +87,10 @@ final class HomeListViewCell: UICollectionViewCell {
       stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
       stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
       stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-      stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+      stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+
+      imageView.widthAnchor.constraint(equalToConstant: 100),
+      imageView.heightAnchor.constraint(equalToConstant: 100)
     ])
   }
 
