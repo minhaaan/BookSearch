@@ -17,10 +17,9 @@ final class HomeRouter: HomeRoutable {
   }
 
   func presentDetail(isbn13: String) {
-    let newVC = detailBuilder.build(isbn13: isbn13)
-    newVC.modalPresentationStyle = .popover
-    newVC.view.backgroundColor = .systemBlue // TODO: REMOVE
-    viewController?.present(newVC, animated: true)
+    let detailViewController = detailBuilder.build(isbn13: isbn13)
+    detailViewController.modalPresentationStyle = .popover
+    viewController?.present(detailViewController, animated: true)
   }
 
 }

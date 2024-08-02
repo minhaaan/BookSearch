@@ -12,7 +12,11 @@ struct HomeListViewDependency {
   let imageLoader: ImageLoader
 }
 
-final class HomeListBuilder {
+protocol HomeListBuilable {
+  func build() -> UIView
+}
+
+final class HomeListBuilder: HomeListBuilable {
 
   let dependency: HomeListViewDependency
   let listener: HomeListListener

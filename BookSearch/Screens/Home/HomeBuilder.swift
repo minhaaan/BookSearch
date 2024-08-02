@@ -30,11 +30,13 @@ final class HomeBuilder {
   func build() -> UIViewController {
     let interactor = HomeInteractor()
 
-    let homeListDependency = HomeListViewDependency(
-      repository: depdendency.repository,
-      imageLoader: depdendency.imageLoader
+    let homeListBuilder = HomeListBuilder(
+      dependency: HomeListViewDependency(
+        repository: depdendency.repository,
+        imageLoader: depdendency.imageLoader
+      ),
+      listener: interactor
     )
-    let homeListBuilder = HomeListBuilder(dependency: homeListDependency, listener: interactor)
 
     let router = HomeRouter(detailBuilder: depdendency.detailBuilder)
     let viewController = HomeViewController(
