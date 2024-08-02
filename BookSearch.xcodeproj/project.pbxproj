@@ -192,6 +192,7 @@
 		E9081F422C5CE8CA0086685D /* ScreenTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F7F2C5D55DC0086685D /* HomeList */,
 				E9081F432C5CE8D20086685D /* Home */,
 			);
 			path = ScreenTests;
@@ -200,23 +201,12 @@
 		E9081F432C5CE8D20086685D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E9081F442C5CE8DF0086685D /* ListView */,
 				E9081F6F2C5D37580086685D /* HomeViewControllerTests.swift */,
 				E9081F752C5D38E90086685D /* HomeRouterTests.swift */,
 				E9081F732C5D38240086685D /* HomeInteractorTests.swift */,
 				E9081F712C5D37D20086685D /* HomeMock.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		E9081F442C5CE8DF0086685D /* ListView */ = {
-			isa = PBXGroup;
-			children = (
-				E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */,
-				E9081F472C5CE9F80086685D /* HomeListMock.swift */,
-				E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */,
-			);
-			path = ListView;
 			sourceTree = "<group>";
 		};
 		E9081F512C5CF7DF0086685D /* ImageCache */ = {
@@ -250,6 +240,16 @@
 				E9081F792C5D465A0086685D /* DetailInteractor.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		E9081F7F2C5D55DC0086685D /* HomeList */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */,
+				E9081F472C5CE9F80086685D /* HomeListMock.swift */,
+				E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */,
+			);
+			path = HomeList;
 			sourceTree = "<group>";
 		};
 		E917DDF72C5BE029005C35F1 = {
