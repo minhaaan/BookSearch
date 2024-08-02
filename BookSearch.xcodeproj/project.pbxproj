@@ -24,6 +24,14 @@
 		E9081F4C2C5CEC500086685D /* BookRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */; };
 		E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */; };
 		E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F4F2C5CF3F90086685D /* DebouncerTests.swift */; };
+		E9081F532C5CF7EA0086685D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F522C5CF7EA0086685D /* ImageCache.swift */; };
+		E9081F552C5CF9390086685D /* CacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F542C5CF9390086685D /* CacheStorage.swift */; };
+		E9081F572C5CF9880086685D /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F562C5CF9880086685D /* MemoryStorage.swift */; };
+		E9081F592C5CFACD0086685D /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F582C5CFACD0086685D /* DiskStorage.swift */; };
+		E9081F5C2C5CFCA20086685D /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F5B2C5CFCA20086685D /* ImageCacheTests.swift */; };
+		E9081F5E2C5CFCC40086685D /* MemoryStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F5D2C5CFCC40086685D /* MemoryStorageTests.swift */; };
+		E9081F602C5CFCEE0086685D /* DiskStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F5F2C5CFCEE0086685D /* DiskStorageTests.swift */; };
+		E9081F622C5CFD100086685D /* CacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F612C5CFD100086685D /* CacheMock.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -65,6 +73,14 @@
 		E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepositoryMock.swift; sourceTree = "<group>"; };
 		E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebouncerMock.swift; sourceTree = "<group>"; };
 		E9081F4F2C5CF3F90086685D /* DebouncerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebouncerTests.swift; sourceTree = "<group>"; };
+		E9081F522C5CF7EA0086685D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		E9081F542C5CF9390086685D /* CacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorage.swift; sourceTree = "<group>"; };
+		E9081F562C5CF9880086685D /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		E9081F582C5CFACD0086685D /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		E9081F5B2C5CFCA20086685D /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		E9081F5D2C5CFCC40086685D /* MemoryStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorageTests.swift; sourceTree = "<group>"; };
+		E9081F5F2C5CFCEE0086685D /* DiskStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorageTests.swift; sourceTree = "<group>"; };
+		E9081F612C5CFD100086685D /* CacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheMock.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +118,7 @@
 		E9081F212C5CC1D40086685D /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F5A2C5CFC8B0086685D /* CacheTests */,
 				E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */,
 				E9081F2A2C5CC5500086685D /* SearchResponseMock.swift */,
 				E9081F252C5CC1FB0086685D /* BookRepositoryTests.swift */,
@@ -171,6 +188,28 @@
 			path = ListView;
 			sourceTree = "<group>";
 		};
+		E9081F512C5CF7DF0086685D /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F522C5CF7EA0086685D /* ImageCache.swift */,
+				E9081F542C5CF9390086685D /* CacheStorage.swift */,
+				E9081F562C5CF9880086685D /* MemoryStorage.swift */,
+				E9081F582C5CFACD0086685D /* DiskStorage.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		E9081F5A2C5CFC8B0086685D /* CacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F5B2C5CFCA20086685D /* ImageCacheTests.swift */,
+				E9081F5F2C5CFCEE0086685D /* DiskStorageTests.swift */,
+				E9081F5D2C5CFCC40086685D /* MemoryStorageTests.swift */,
+				E9081F612C5CFD100086685D /* CacheMock.swift */,
+			);
+			path = CacheTests;
+			sourceTree = "<group>";
+		};
 		E917DDF72C5BE029005C35F1 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +277,7 @@
 		E917DE392C5CB9B6005C35F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F512C5CF7DF0086685D /* ImageCache */,
 				E917DE3D2C5CB9E4005C35F1 /* DTO */,
 				E917DE402C5CBAE6005C35F1 /* Network */,
 				E917DE3A2C5CB9B9005C35F1 /* Repository */,
@@ -376,14 +416,18 @@
 				E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */,
 				E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */,
 				E9081F3E2C5CD4D00086685D /* HomeInteractor.swift in Sources */,
+				E9081F572C5CF9880086685D /* MemoryStorage.swift in Sources */,
 				E9081F382C5CD2960086685D /* HomeListInteractor.swift in Sources */,
 				E917DE482C5CC05E005C35F1 /* DetailDTO.swift in Sources */,
 				E917DE3C2C5CB9C0005C35F1 /* BookRepository.swift in Sources */,
+				E9081F592C5CFACD0086685D /* DiskStorage.swift in Sources */,
 				E917DE462C5CBB8D005C35F1 /* Provider.swift in Sources */,
 				E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */,
 				E9081F312C5CD0840086685D /* HomeListView.swift in Sources */,
+				E9081F552C5CF9390086685D /* CacheStorage.swift in Sources */,
 				E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */,
 				E9081F362C5CD22E0086685D /* HomeListBuilder.swift in Sources */,
+				E9081F532C5CF7EA0086685D /* ImageCache.swift in Sources */,
 				E917DE422C5CBAEC005C35F1 /* BookApi.swift in Sources */,
 				E9081F3C2C5CD47E0086685D /* HomeBuilder.swift in Sources */,
 				E9081F412C5CE8940086685D /* Debouncer.swift in Sources */,
@@ -401,8 +445,12 @@
 				E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */,
 				E9081F4A2C5CEBD80086685D /* HomeListInteractorTests.swift in Sources */,
 				E9081F262C5CC1FB0086685D /* BookRepositoryTests.swift in Sources */,
+				E9081F5E2C5CFCC40086685D /* MemoryStorageTests.swift in Sources */,
 				E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */,
+				E9081F5C2C5CFCA20086685D /* ImageCacheTests.swift in Sources */,
+				E9081F602C5CFCEE0086685D /* DiskStorageTests.swift in Sources */,
 				E9081F462C5CE8EC0086685D /* HomeListViewTests.swift in Sources */,
+				E9081F622C5CFD100086685D /* CacheMock.swift in Sources */,
 				E9081F2B2C5CC5500086685D /* SearchResponseMock.swift in Sources */,
 				E9081F482C5CE9F80086685D /* HomeListMock.swift in Sources */,
 			);
