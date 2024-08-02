@@ -51,23 +51,35 @@ final class BookRepositoryMock: BookRepository {
 
   // MARK: - detail
 
-  var detailIsbnThrowableError: Error?
   var detailIsbnCallsCount = 0
   var detailIsbnCalled: Bool {
     detailIsbnCallsCount > 0
   }
-  var detailIsbnReceivedIsbn: String?
-  var detailIsbnReceivedInvocations: [String] = []
-  var detailIsbnReturnValue: DetailDTO!
-  var detailIsbnClosure: ((String) throws -> DetailDTO)?
+  var detailError: Error?
+  var dummyDetailDTO: DetailDTO = DetailDTO(
+    error: "0",
+    title: "title",
+    subtitle: "subtitle",
+    authors: "authors",
+    publisher: "asda",
+    language: "asd",
+    isbn10: "asd",
+    isbn13: "asd",
+    pages: "a",
+    year: "",
+    rating: "",
+    desc: "",
+    price: "",
+    image: "https://google.com",
+    url: "https://google.com",
+    pdf: ["123": "https:google.com"]
+  )
+  var detailIsbnClosure: () -> Void = {}
 
-  func detail(isbn: String) throws -> DetailDTO {
+  func detail(isbn: String) async throws -> DetailDTO {
     detailIsbnCallsCount += 1
-    if let error = detailIsbnThrowableError {
-      throw error
-    }
-    detailIsbnReceivedIsbn = isbn
-    detailIsbnReceivedInvocations.append(isbn)
-    return try detailIsbnClosure.map({ try $0(isbn) }) ?? detailIsbnReturnValue
+    detailIsbnClosure()
+    if let detailError { throw detailError}
+    return dummyDetailDTO
   }
 }
