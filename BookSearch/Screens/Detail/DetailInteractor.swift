@@ -54,22 +54,22 @@ final class DetailInteractor: DetailPresentableListener {
     await presenter?.updateLabelData(data: detail) // 라벨 데이터 업데이트
 
     // 이미지 조회 + 이미지 업데이트
-    if let imageURL = URL(string: detail.image),
-       let image = try? await imageLoader.loadImage(from: imageURL) {
-      await presenter?.updateImage(image: image)
+    if let imageURL = URL(string: detail.image) {
+      async let image = imageLoader.loadImage(from: imageURL)
+      try? await presenter?.updateImage(image: image)
     }
 
     // PDF 생성
-    if let pdf = detail.pdf,
-       pdf.count > 0,
-       let pdfDocument = await createPdfDocument(pdfData: pdf)
-    {
-      await presenter?.addPdfView(pdfDocument: pdfDocument)
+    if let pdf = detail.pdf, pdf.count > 0 {
+      async let pdfDocument = createPdfDocument(pdfData: pdf)
+      if let pdfDocument = await pdfDocument {
+        await presenter?.addPdfView(pdfDocument: pdfDocument)
+      }
     }
   }
-  
+
   /// PDF Document 생성
-  func createPdfDocument(pdfData: [String: String]) async -> PDFDocument? {
+  private func createPdfDocument(pdfData: [String: String]) async -> PDFDocument? {
     let urls = pdfData.values.compactMap { URL(string: "\($0)") } // 생성할 pdf url
 
     guard urls.count > 0 else { return nil } // 비어있다면 nil Return
@@ -87,3 +87,4 @@ final class DetailInteractor: DetailPresentableListener {
   }
 
 }
+
