@@ -9,6 +9,7 @@ import UIKit
 
 struct HomeDependency {
   let repository: BookRepository
+  let imageLoader: ImageLoader
 }
 
 final class HomeBuilder {
@@ -29,7 +30,8 @@ final class HomeBuilder {
     let interactor = HomeInteractor()
 
     let homeListDependency = HomeListViewDependency(
-      repository: depdendency.repository
+      repository: depdendency.repository,
+      imageLoader: depdendency.imageLoader
     )
     let homeListBuilder = HomeListBuilder(dependency: homeListDependency, listener: interactor)
 
