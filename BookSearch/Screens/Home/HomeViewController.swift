@@ -1,14 +1,30 @@
 import UIKit
 
-final class HomeViewController: UIViewController {
+protocol HomePresentableListener: AnyObject {
+}
+
+final class HomeViewController: UIViewController, HomePresentable {
 
   // MARK: Properties
+
+  var listener: HomePresentableListener?
 
   // MARK: Layout Props
 
   private let searchBar = UISearchBar()
 
-  private let listView = HomeListView()
+  private let listView: UIView
+
+  // MARK: init
+
+  init(listView: UIView) {
+    self.listView = listView
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError()
+  }
 
   // MARK: LifeCycle
 
@@ -26,20 +42,11 @@ final class HomeViewController: UIViewController {
   private func setupLayout() {
     view.backgroundColor = .systemBackground
 
-    // SearchBar 레이아웃 설정
-    view.addSubview(searchBar)
-    searchBar.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-      searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-      searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-    ])
-
     // ListView 레이아웃 설정
     view.addSubview(listView)
     listView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      listView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+      listView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
       listView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       listView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
       listView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
@@ -47,4 +54,3 @@ final class HomeViewController: UIViewController {
   }
 
 }
-
