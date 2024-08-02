@@ -15,7 +15,7 @@ final class HomeListViewCell: UICollectionViewCell {
 
   // MARK: Layout Props
 
-  let titleLabel = DefaultLabel() // TODO: private
+  private let titleLabel = DefaultLabel()
   private let subtitleLabel = DefaultLabel()
   private let isbnLabel = DefaultLabel()
   private let priceLabel = DefaultLabel()
@@ -41,16 +41,31 @@ final class HomeListViewCell: UICollectionViewCell {
 
   override func prepareForReuse() {
     super.prepareForReuse()
-
+    // Label Text, ImageView image 초기화
+    [titleLabel, subtitleLabel, isbnLabel, priceLabel, urlLabel].forEach {
+      $0.text = nil
+    }
+    imageView.image = nil
   }
 
   // MARK: Method
+  
+  /// 셀 데이터 업데이트
+  func updateCellData(book: SearchDTO.Book) {
+    titleLabel.text = book.title
+    subtitleLabel.text = book.subtitle
+    isbnLabel.text = book.isbn13
+    priceLabel.text = book.price
+    // TODO: Image 로딩
+    imageView.image = UIImage(systemName: "flame")
+    urlLabel.text = book.url
+  }
 
   private func setupLayout() {
     contentView.backgroundColor = .secondarySystemBackground
 
     let stackView = UIStackView(arrangedSubviews: [
-      titleLabel, subtitleLabel, isbnLabel, priceLabel, imageView, urlLabel
+      imageView, titleLabel, subtitleLabel, isbnLabel, priceLabel, urlLabel
     ])
     stackView.spacing = 2
     stackView.axis = .vertical
