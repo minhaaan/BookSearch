@@ -34,6 +34,13 @@
 		E9081F622C5CFD100086685D /* CacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F612C5CFD100086685D /* CacheMock.swift */; };
 		E9081F642C5D00350086685D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F632C5D00350086685D /* ImageLoader.swift */; };
 		E9081F662C5D03770086685D /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F652C5D03770086685D /* ImageLoaderTests.swift */; };
+		E9081F682C5D304C0086685D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F672C5D304C0086685D /* Array+Extension.swift */; };
+		E9081F6A2C5D32710086685D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F692C5D32710086685D /* HomeRouter.swift */; };
+		E9081F6D2C5D32B50086685D /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F6C2C5D32B50086685D /* DetailBuilder.swift */; };
+		E9081F702C5D37580086685D /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F6F2C5D37580086685D /* HomeViewControllerTests.swift */; };
+		E9081F722C5D37D20086685D /* HomeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F712C5D37D20086685D /* HomeMock.swift */; };
+		E9081F742C5D38240086685D /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F732C5D38240086685D /* HomeInteractorTests.swift */; };
+		E9081F762C5D38E90086685D /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F752C5D38E90086685D /* HomeRouterTests.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -85,6 +92,14 @@
 		E9081F612C5CFD100086685D /* CacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheMock.swift; sourceTree = "<group>"; };
 		E9081F632C5D00350086685D /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		E9081F652C5D03770086685D /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
+		E9081F672C5D304C0086685D /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		E9081F692C5D32710086685D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E9081F6C2C5D32B50086685D /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		E9081F6E2C5D36F30086685D /* BookSearch.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookSearch.xctestplan; sourceTree = "<group>"; };
+		E9081F6F2C5D37580086685D /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		E9081F712C5D37D20086685D /* HomeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMock.swift; sourceTree = "<group>"; };
+		E9081F732C5D38240086685D /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		E9081F752C5D38E90086685D /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +149,7 @@
 		E9081F272C5CC2490086685D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */,
 				E9081F282C5CC2560086685D /* MockURLProtocol.swift */,
 			);
 			path = Helper;
@@ -162,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E9081F402C5CE8940086685D /* Debouncer.swift */,
+				E9081F672C5D304C0086685D /* Array+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -178,6 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				E9081F442C5CE8DF0086685D /* ListView */,
+				E9081F6F2C5D37580086685D /* HomeViewControllerTests.swift */,
+				E9081F752C5D38E90086685D /* HomeRouterTests.swift */,
+				E9081F732C5D38240086685D /* HomeInteractorTests.swift */,
+				E9081F712C5D37D20086685D /* HomeMock.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -188,7 +209,6 @@
 				E9081F452C5CE8EC0086685D /* HomeListViewTests.swift */,
 				E9081F472C5CE9F80086685D /* HomeListMock.swift */,
 				E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */,
-				E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -215,9 +235,18 @@
 			path = CacheTests;
 			sourceTree = "<group>";
 		};
+		E9081F6B2C5D32A90086685D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F6C2C5D32B50086685D /* DetailBuilder.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		E917DDF72C5BE029005C35F1 = {
 			isa = PBXGroup;
 			children = (
+				E9081F6E2C5D36F30086685D /* BookSearch.xctestplan */,
 				E917DE022C5BE029005C35F1 /* BookSearch */,
 				E917DE192C5BE029005C35F1 /* BookSearchTests */,
 				E917DE012C5BE029005C35F1 /* Products */,
@@ -262,6 +291,7 @@
 		E917DE352C5BE2A9005C35F1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F6B2C5D32A90086685D /* Detail */,
 				E9081F322C5CD12E0086685D /* CommonUI */,
 				E917DE362C5BE2B0005C35F1 /* Home */,
 			);
@@ -275,6 +305,7 @@
 				E917DE372C5BE2C1005C35F1 /* HomeViewController.swift */,
 				E9081F3B2C5CD47E0086685D /* HomeBuilder.swift */,
 				E9081F3D2C5CD4D00086685D /* HomeInteractor.swift */,
+				E9081F692C5D32710086685D /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -425,12 +456,15 @@
 				E9081F572C5CF9880086685D /* MemoryStorage.swift in Sources */,
 				E9081F382C5CD2960086685D /* HomeListInteractor.swift in Sources */,
 				E917DE482C5CC05E005C35F1 /* DetailDTO.swift in Sources */,
+				E9081F6D2C5D32B50086685D /* DetailBuilder.swift in Sources */,
 				E917DE3C2C5CB9C0005C35F1 /* BookRepository.swift in Sources */,
 				E9081F592C5CFACD0086685D /* DiskStorage.swift in Sources */,
 				E917DE462C5CBB8D005C35F1 /* Provider.swift in Sources */,
 				E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */,
 				E9081F312C5CD0840086685D /* HomeListView.swift in Sources */,
+				E9081F6A2C5D32710086685D /* HomeRouter.swift in Sources */,
 				E9081F552C5CF9390086685D /* CacheStorage.swift in Sources */,
+				E9081F682C5D304C0086685D /* Array+Extension.swift in Sources */,
 				E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */,
 				E9081F362C5CD22E0086685D /* HomeListBuilder.swift in Sources */,
 				E9081F532C5CF7EA0086685D /* ImageCache.swift in Sources */,
@@ -448,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9081F4C2C5CEC500086685D /* BookRepositoryMock.swift in Sources */,
+				E9081F762C5D38E90086685D /* HomeRouterTests.swift in Sources */,
 				E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */,
 				E9081F662C5D03770086685D /* ImageLoaderTests.swift in Sources */,
 				E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */,
@@ -457,8 +492,11 @@
 				E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */,
 				E9081F5C2C5CFCA20086685D /* ImageCacheTests.swift in Sources */,
 				E9081F602C5CFCEE0086685D /* DiskStorageTests.swift in Sources */,
+				E9081F702C5D37580086685D /* HomeViewControllerTests.swift in Sources */,
 				E9081F462C5CE8EC0086685D /* HomeListViewTests.swift in Sources */,
+				E9081F722C5D37D20086685D /* HomeMock.swift in Sources */,
 				E9081F622C5CFD100086685D /* CacheMock.swift in Sources */,
+				E9081F742C5D38240086685D /* HomeInteractorTests.swift in Sources */,
 				E9081F2B2C5CC5500086685D /* SearchResponseMock.swift in Sources */,
 				E9081F482C5CE9F80086685D /* HomeListMock.swift in Sources */,
 			);
