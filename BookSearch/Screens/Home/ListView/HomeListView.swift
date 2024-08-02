@@ -154,4 +154,11 @@ extension HomeListView: UISearchBarDelegate {
   }
 }
 
+// MARK: UIScrollViewDelegate
+
+extension HomeListView: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    searchBar.resignFirstResponder() // 스크롤하면 키보드 내림
+  }
+}
 
