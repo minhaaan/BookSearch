@@ -10,7 +10,9 @@ import UIKit
 protocol HomeListPresentableListener: AnyObject {
   var books: [SearchDTO.Book] { get }
   var imageLoader: ImageLoader { get }
+
   func updateQuery(query: String) async
+  func willDisplay(query: String, indexPath: IndexPath) async
 }
 
 final class HomeListView: UIView, HomeListPresentable {
@@ -127,7 +129,12 @@ extension HomeListView: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegate
 
 extension HomeListView: UICollectionViewDelegate {
-
+  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    Task {
+      guard let query = searchBar.text else { return }
+      await listener?.willDisplay(query: query, indexPath: indexPath)
+    }
+  }
 }
 
 // MARK: UISearchBarDelegate
