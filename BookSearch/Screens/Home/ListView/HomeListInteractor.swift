@@ -67,10 +67,11 @@ final class HomeListInteractor: HomeListPresentableListener {
 
       // API 요청
       do {
-        let books = try await self.bookRepo.search(query: query)
-        self.books = books.books
-        self.pageData = PageData(curPage: Int(books.page), totalPage: Int(books.total))
+        let _books = try await self.bookRepo.search(query: query)
+        self.books = _books.books
+        self.pageData = PageData(curPage: Int(_books.page), totalPage: Int(_books.total))
         presenter?.updateListView()
+        print("DEBUG: BOOKS \(_books)") // TODO: REMOVE
       } catch {
       }
     }

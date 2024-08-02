@@ -41,6 +41,9 @@
 		E9081F722C5D37D20086685D /* HomeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F712C5D37D20086685D /* HomeMock.swift */; };
 		E9081F742C5D38240086685D /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F732C5D38240086685D /* HomeInteractorTests.swift */; };
 		E9081F762C5D38E90086685D /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F752C5D38E90086685D /* HomeRouterTests.swift */; };
+		E9081F782C5D3BC20086685D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F772C5D3BC20086685D /* DetailViewController.swift */; };
+		E9081F7A2C5D465A0086685D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F792C5D465A0086685D /* DetailInteractor.swift */; };
+		E9081F7C2C5D51F30086685D /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F7B2C5D51F30086685D /* DetailRouter.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -100,6 +103,9 @@
 		E9081F712C5D37D20086685D /* HomeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMock.swift; sourceTree = "<group>"; };
 		E9081F732C5D38240086685D /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		E9081F752C5D38E90086685D /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		E9081F772C5D3BC20086685D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E9081F792C5D465A0086685D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		E9081F7B2C5D51F30086685D /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 			isa = PBXGroup;
 			children = (
 				E9081F6C2C5D32B50086685D /* DetailBuilder.swift */,
+				E9081F772C5D3BC20086685D /* DetailViewController.swift */,
+				E9081F7B2C5D51F30086685D /* DetailRouter.swift */,
+				E9081F792C5D465A0086685D /* DetailInteractor.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -452,7 +461,9 @@
 				E917DE3F2C5CBA65005C35F1 /* SearchDTO.swift in Sources */,
 				E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */,
 				E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */,
+				E9081F7A2C5D465A0086685D /* DetailInteractor.swift in Sources */,
 				E9081F3E2C5CD4D00086685D /* HomeInteractor.swift in Sources */,
+				E9081F7C2C5D51F30086685D /* DetailRouter.swift in Sources */,
 				E9081F572C5CF9880086685D /* MemoryStorage.swift in Sources */,
 				E9081F382C5CD2960086685D /* HomeListInteractor.swift in Sources */,
 				E917DE482C5CC05E005C35F1 /* DetailDTO.swift in Sources */,
@@ -462,6 +473,7 @@
 				E917DE462C5CBB8D005C35F1 /* Provider.swift in Sources */,
 				E917DE382C5BE2C1005C35F1 /* HomeViewController.swift in Sources */,
 				E9081F312C5CD0840086685D /* HomeListView.swift in Sources */,
+				E9081F782C5D3BC20086685D /* DetailViewController.swift in Sources */,
 				E9081F6A2C5D32710086685D /* HomeRouter.swift in Sources */,
 				E9081F552C5CF9390086685D /* CacheStorage.swift in Sources */,
 				E9081F682C5D304C0086685D /* Array+Extension.swift in Sources */,
