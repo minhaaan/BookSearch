@@ -32,6 +32,8 @@
 		E9081F5E2C5CFCC40086685D /* MemoryStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F5D2C5CFCC40086685D /* MemoryStorageTests.swift */; };
 		E9081F602C5CFCEE0086685D /* DiskStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F5F2C5CFCEE0086685D /* DiskStorageTests.swift */; };
 		E9081F622C5CFD100086685D /* CacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F612C5CFD100086685D /* CacheMock.swift */; };
+		E9081F642C5D00350086685D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F632C5D00350086685D /* ImageLoader.swift */; };
+		E9081F662C5D03770086685D /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F652C5D03770086685D /* ImageLoaderTests.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -81,6 +83,8 @@
 		E9081F5D2C5CFCC40086685D /* MemoryStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorageTests.swift; sourceTree = "<group>"; };
 		E9081F5F2C5CFCEE0086685D /* DiskStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorageTests.swift; sourceTree = "<group>"; };
 		E9081F612C5CFD100086685D /* CacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheMock.swift; sourceTree = "<group>"; };
+		E9081F632C5D00350086685D /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E9081F652C5D03770086685D /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				E9081F4B2C5CEC500086685D /* BookRepositoryMock.swift */,
 				E9081F2A2C5CC5500086685D /* SearchResponseMock.swift */,
 				E9081F252C5CC1FB0086685D /* BookRepositoryTests.swift */,
+				E9081F652C5D03770086685D /* ImageLoaderTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				E917DE3D2C5CB9E4005C35F1 /* DTO */,
 				E917DE402C5CBAE6005C35F1 /* Network */,
 				E917DE3A2C5CB9B9005C35F1 /* Repository */,
+				E9081F632C5D00350086685D /* ImageLoader.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 				E9081F2F2C5CCE9A0086685D /* HomeListViewCell.swift in Sources */,
 				E9081F362C5CD22E0086685D /* HomeListBuilder.swift in Sources */,
 				E9081F532C5CF7EA0086685D /* ImageCache.swift in Sources */,
+				E9081F642C5D00350086685D /* ImageLoader.swift in Sources */,
 				E917DE422C5CBAEC005C35F1 /* BookApi.swift in Sources */,
 				E9081F3C2C5CD47E0086685D /* HomeBuilder.swift in Sources */,
 				E9081F412C5CE8940086685D /* Debouncer.swift in Sources */,
@@ -442,6 +449,7 @@
 			files = (
 				E9081F4C2C5CEC500086685D /* BookRepositoryMock.swift in Sources */,
 				E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */,
+				E9081F662C5D03770086685D /* ImageLoaderTests.swift in Sources */,
 				E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */,
 				E9081F4A2C5CEBD80086685D /* HomeListInteractorTests.swift in Sources */,
 				E9081F262C5CC1FB0086685D /* BookRepositoryTests.swift in Sources */,
