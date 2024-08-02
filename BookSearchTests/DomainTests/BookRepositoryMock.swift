@@ -26,34 +26,27 @@ final class BookRepositoryMock: BookRepository {
   var searchQueryCalled: Bool {
     searchQueryCallsCount > 0
   }
+  var searchQueryReturningValue: SearchDTO?
   var searchQueryClosure: () -> Void = {}
 
   func search(query: String) async throws -> SearchDTO {
     searchQueryCallsCount += 1
     searchQueryClosure()
-    return dummySearchDTO
+    return searchQueryReturningValue ?? dummySearchDTO
   }
 
   // MARK: - searchPage
 
-  var searchPageQueryPageThrowableError: Error?
   var searchPageQueryPageCallsCount = 0
   var searchPageQueryPageCalled: Bool {
     searchPageQueryPageCallsCount > 0
   }
-  var searchPageQueryPageReceivedArguments: (query: String, page: Int)?
-  var searchPageQueryPageReceivedInvocations: [(query: String, page: Int)] = []
-  var searchPageQueryPageReturnValue: SearchDTO!
-  var searchPageQueryPageClosure: ((String, Int) throws -> SearchDTO)?
+  var searchPageQueryPageClosure: () -> Void = {}
 
   func searchPage(query: String, page: Int) throws -> SearchDTO {
     searchPageQueryPageCallsCount += 1
-    if let error = searchPageQueryPageThrowableError {
-      throw error
-    }
-    searchPageQueryPageReceivedArguments = (query: query, page: page)
-    searchPageQueryPageReceivedInvocations.append((query: query, page: page))
-    return try searchPageQueryPageClosure.map({ try $0(query, page) }) ?? searchPageQueryPageReturnValue
+    searchPageQueryPageClosure()
+    return dummySearchDTO
   }
 
   // MARK: - detail

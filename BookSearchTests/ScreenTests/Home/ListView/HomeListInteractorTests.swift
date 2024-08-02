@@ -62,5 +62,42 @@ final class HomeListInteractorTests: XCTestCase {
     XCTAssert(presenter.updateListViewCalled) // CollectioView 업데이트 확인
   }
 
+  func test_willDisplay_호출했을때_다음페이지_조회() async {
+    // GIVEN
+    let query = "SWIFT"
+
+    // WHEN
+    await interactor.updateQuery(query: query)
+    await interactor.willDisplay(query: query, indexPath: IndexPath(row: 0, section: 0))
+
+    // THEN
+    XCTAssert(bookRepo.searchPageQueryPageCallsCount == 1) // API 호출 검사
+  }
+
+  @MainActor
+  func test_willDisplay_페이지네이션_조건아닐때() async {
+    // GIVEN
+    let query = "SWIFT"
+    let searchDTOMock: SearchDTO = SearchDTO(
+      error: "0",
+      total: "3",
+      page: "1",
+      books: [
+        .init(title: "", subtitle: "", isbn13: "", price: "", image: "", url: ""),
+        .init(title: "", subtitle: "", isbn13: "", price: "", image: "", url: ""),
+        .init(title: "", subtitle: "", isbn13: "", price: "", image: "", url: ""),
+        .init(title: "", subtitle: "", isbn13: "", price: "", image: "", url: ""),
+      ]
+    )
+    bookRepo.searchQueryReturningValue = searchDTOMock
+
+    // WHEN
+    await interactor.updateQuery(query: query)
+    await interactor.willDisplay(query: query, indexPath: IndexPath(row: 0, section: 0))
+
+    // THEN
+    XCTAssert(bookRepo.searchPageQueryPageCallsCount == 0)
+  }
+
 
 }
