@@ -44,6 +44,10 @@
 		E9081F782C5D3BC20086685D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F772C5D3BC20086685D /* DetailViewController.swift */; };
 		E9081F7A2C5D465A0086685D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F792C5D465A0086685D /* DetailInteractor.swift */; };
 		E9081F7C2C5D51F30086685D /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F7B2C5D51F30086685D /* DetailRouter.swift */; };
+		E9081F822C5D560A0086685D /* DetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F812C5D560A0086685D /* DetailInteractorTests.swift */; };
+		E9081F842C5D573E0086685D /* DetailMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F832C5D573E0086685D /* DetailMock.swift */; };
+		E9081F862C5D58520086685D /* ImageLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F852C5D58520086685D /* ImageLoaderMock.swift */; };
+		E9081F882C5D59E80086685D /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9081F872C5D59E80086685D /* DetailViewControllerTests.swift */; };
 		E917DE042C5BE029005C35F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE032C5BE029005C35F1 /* AppDelegate.swift */; };
 		E917DE062C5BE029005C35F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917DE052C5BE029005C35F1 /* SceneDelegate.swift */; };
 		E917DE0D2C5BE029005C35F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E917DE0C2C5BE029005C35F1 /* Assets.xcassets */; };
@@ -106,6 +110,10 @@
 		E9081F772C5D3BC20086685D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E9081F792C5D465A0086685D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		E9081F7B2C5D51F30086685D /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		E9081F812C5D560A0086685D /* DetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTests.swift; sourceTree = "<group>"; };
+		E9081F832C5D573E0086685D /* DetailMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMock.swift; sourceTree = "<group>"; };
+		E9081F852C5D58520086685D /* ImageLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderMock.swift; sourceTree = "<group>"; };
+		E9081F872C5D59E80086685D /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		E917DE002C5BE029005C35F1 /* BookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E917DE032C5BE029005C35F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E917DE052C5BE029005C35F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 			children = (
 				E9081F4D2C5CF0CE0086685D /* DebouncerMock.swift */,
 				E9081F282C5CC2560086685D /* MockURLProtocol.swift */,
+				E9081F852C5D58520086685D /* ImageLoaderMock.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 		E9081F422C5CE8CA0086685D /* ScreenTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9081F802C5D55F40086685D /* Detail */,
 				E9081F7F2C5D55DC0086685D /* HomeList */,
 				E9081F432C5CE8D20086685D /* Home */,
 			);
@@ -250,6 +260,16 @@
 				E9081F492C5CEBD80086685D /* HomeListInteractorTests.swift */,
 			);
 			path = HomeList;
+			sourceTree = "<group>";
+		};
+		E9081F802C5D55F40086685D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E9081F812C5D560A0086685D /* DetailInteractorTests.swift */,
+				E9081F872C5D59E80086685D /* DetailViewControllerTests.swift */,
+				E9081F832C5D573E0086685D /* DetailMock.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		E917DDF72C5BE029005C35F1 = {
@@ -497,8 +517,10 @@
 				E9081F762C5D38E90086685D /* HomeRouterTests.swift in Sources */,
 				E9081F4E2C5CF0CE0086685D /* DebouncerMock.swift in Sources */,
 				E9081F662C5D03770086685D /* ImageLoaderTests.swift in Sources */,
+				E9081F842C5D573E0086685D /* DetailMock.swift in Sources */,
 				E9081F292C5CC2560086685D /* MockURLProtocol.swift in Sources */,
 				E9081F4A2C5CEBD80086685D /* HomeListInteractorTests.swift in Sources */,
+				E9081F822C5D560A0086685D /* DetailInteractorTests.swift in Sources */,
 				E9081F262C5CC1FB0086685D /* BookRepositoryTests.swift in Sources */,
 				E9081F5E2C5CFCC40086685D /* MemoryStorageTests.swift in Sources */,
 				E9081F502C5CF3F90086685D /* DebouncerTests.swift in Sources */,
@@ -510,7 +532,9 @@
 				E9081F622C5CFD100086685D /* CacheMock.swift in Sources */,
 				E9081F742C5D38240086685D /* HomeInteractorTests.swift in Sources */,
 				E9081F2B2C5CC5500086685D /* SearchResponseMock.swift in Sources */,
+				E9081F882C5D59E80086685D /* DetailViewControllerTests.swift in Sources */,
 				E9081F482C5CE9F80086685D /* HomeListMock.swift in Sources */,
+				E9081F862C5D58520086685D /* ImageLoaderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
