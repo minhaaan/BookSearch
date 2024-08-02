@@ -24,7 +24,6 @@ final class HomeListViewTests: XCTestCase {
   override func tearDownWithError() throws {
   }
 
-  @MainActor
   func test_검색어바뀌었을떄_updateQuery_호출하는가() async {
     // GIVEN
     let query = "123"
@@ -33,12 +32,31 @@ final class HomeListViewTests: XCTestCase {
     }
 
     // WHEN
-    listView.searchBar(.init(), textDidChange: query)
+    await listView.searchBar(.init(), textDidChange: query)
 
     // THEN
     await fulfillment(of: [exp], timeout: 0.1)
     XCTAssert(presentableListener.updateQueryQueryCallsCount == 1)
   }
+
+  func test_willDisplay() async {
+    // GIVEN
+    presentableListener.willDisplayQueryIndexPathClosure = { _, _ in
+      self.exp.fulfill()
+    }
+
+    // WHEN
+    await listView.collectionView(
+      .init(frame: .zero, collectionViewLayout: .init()),
+      willDisplay: .init(frame: .zero),
+      forItemAt: IndexPath(item: 0, section: 0)
+    )
+
+    // THEN
+    await fulfillment(of: [exp], timeout: 0.1)
+    XCTAssert(presentableListener.willDisplayQueryIndexPathCallsCount == 1)
+  }
+
 }
 
 
