@@ -54,12 +54,11 @@ final class HomeListInteractor: HomeListPresentableListener {
   /// - Parameter query: 검색어
   @MainActor
   func updateQuery(query: String) async {
+    // 디바운스 0.5초
     await debouncer.debounce(delay: 0.5) { [weak self] in
       guard let self = self else { return }
       // query 바뀌었으니 books 데이터 초기화
-      self.books = []
-      self.pageData = nil
-      self.presenter?.updateListView()
+      self.clearBooksData()
 
       // 공백제거한 query가 비어있다면 API 요청하지않음
       guard query.replacingOccurrences(of: " ", with: "").isEmpty == false else { return }
@@ -84,6 +83,13 @@ final class HomeListInteractor: HomeListPresentableListener {
   func didSelectItemAt(indexPath: IndexPath) async {
     guard let isbn13 = books[safe: indexPath.row]?.isbn13 else { return }
     await listener?.routeDetail(isbn13: isbn13)
+  }
+  
+  /// 책 데이터 초기화
+  private func clearBooksData() {
+    books = []
+    pageData = nil
+    presenter?.updateListView()
   }
 
   // MARK: PageNation

@@ -111,11 +111,12 @@ extension HomeListView: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(
-      withReuseIdentifier: HomeListViewCell.ID,
-      for: indexPath
-    ) as? HomeListViewCell,
-          let book = listener?.books[indexPath.row]
+    guard
+      let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: HomeListViewCell.ID,
+        for: indexPath
+      ) as? HomeListViewCell,
+      let book = listener?.books[indexPath.row]
     else {
       return UICollectionViewCell()
     }
