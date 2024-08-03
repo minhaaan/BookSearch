@@ -61,8 +61,8 @@ final class HomeListInteractor: HomeListPresentableListener {
       self.pageData = nil
       self.presenter?.updateListView()
 
-      // query가 비어있다면 API 요청하지않음
-      guard query.isEmpty == false else { return }
+      // 공백제거한 query가 비어있다면 API 요청하지않음
+      guard query.replacingOccurrences(of: " ", with: "").isEmpty == false else { return }
 
       // API 요청
       do {
