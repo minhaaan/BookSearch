@@ -17,11 +17,10 @@ protocol HomeListPresentable: AnyObject {
 
 final class HomeListInteractor: HomeListPresentableListener {
 
-  struct PageData {
-    /// 현재 페이지
-    let curPage: Int?
-    /// 전체 페이지
-    let totalPage: Int?
+  private struct PageData {
+    let query: String // 검색어
+    let curPage: Int? // 현재 페이지
+    let totalPage: Int? // 전체 페이지
   }
 
   // MARK: Properties
@@ -67,11 +66,14 @@ final class HomeListInteractor: HomeListPresentableListener {
 
       // API 요청
       do {
-        let _books = try await self.bookRepo.search(query: query)
-        self.books = _books.books
-        self.pageData = PageData(curPage: Int(_books.page), totalPage: Int(_books.total))
+        let search = try await self.bookRepo.search(query: query)
+        self.books = search.books
+        self.pageData = PageData(
+          query: query,
+          curPage: Int(search.page),
+          totalPage: Int(search.total)
+        )
         presenter?.updateListView()
-        print("DEBUG: BOOKS \(_books)") // TODO: REMOVE
       } catch {
       }
     }
@@ -90,10 +92,11 @@ final class HomeListInteractor: HomeListPresentableListener {
   /// - Parameters:
   ///   - query: 현재 검색어
   ///   - indexPath: IndexPath
-  func willDisplay(query: String, indexPath: IndexPath) async {
+  func willDisplay(indexPath: IndexPath) async {
     guard
-      let curPage = pageData?.curPage, // 현재 페이지
-      let totalPage = pageData?.totalPage, // 전체 페이지
+      let pageData,
+      let curPage = pageData.curPage, // 현재 페이지
+      let totalPage = pageData.totalPage, // 전체 페이지
       curPage <= (totalPage / 10) + 1,
       indexPath.row == books.count - 1
     else {
@@ -101,18 +104,27 @@ final class HomeListInteractor: HomeListPresentableListener {
     }
 
     // 다음 페이지 조회
-    try? await fetchNextPage(query: query, nextPage: curPage + 1)
+    try? await fetchNextPage(nextPage: curPage + 1)
   }
   
   /// 다음 페이지 조회
   /// - Parameters:
   ///   - query: 검색어
   ///   - nextPage: 다음 페이지
-  private func fetchNextPage(query: String, nextPage: Int) async throws {
-    guard pageData?.curPage != nextPage else { return } // 조회할 페이지가 현재 페이지와 같지 않아야함
+  private func fetchNextPage(nextPage: Int) async throws {
+    guard
+      pageData?.curPage != nextPage, // 조회할 페이지가 현재 페이지와 같지 않아야함
+      let query = pageData?.query
+    else {
+      return
+    }
 
     let books = try await bookRepo.searchPage(query: query, page: nextPage)
-    pageData = PageData(curPage: Int(books.page), totalPage: Int(books.total)) // 페이지 데이터 업데이트
+    pageData = PageData( // 페이지 데이터 업데이트
+      query: query,
+      curPage: Int(books.page),
+      totalPage: Int(books.total)
+    )
 
     Task { @MainActor in
       self.books += books.books // 책 추가
@@ -121,7 +133,3 @@ final class HomeListInteractor: HomeListPresentableListener {
   }
 
 }
-
-
-
-

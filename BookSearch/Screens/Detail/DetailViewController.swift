@@ -22,7 +22,8 @@ final class DetailViewController: UIViewController, DetailPresentable {
 
   var listener: DetailPresentableListener?
   var router: DetailRoutable?
-
+  
+  /// 데이터 조회 한번만 요청하기 위한 flag
   private var hasFetchedDetailData: Bool = false
 
   // MARK: Layout Props

@@ -34,19 +34,19 @@ final class HomeListPresentableListenerMock: HomeListPresentableListener {
 
   // MARK: - willDisplay
 
-  var willDisplayQueryIndexPathCallsCount = 0
-  var willDisplayQueryIndexPathCalled: Bool {
-    willDisplayQueryIndexPathCallsCount > 0
+  var willDisplayIndexPathCallsCount = 0
+  var willDisplayIndexPathCalled: Bool {
+    willDisplayIndexPathCallsCount > 0
   }
-  var willDisplayQueryIndexPathReceivedArguments: (query: String, indexPath: IndexPath)?
-  var willDisplayQueryIndexPathReceivedInvocations: [(query: String, indexPath: IndexPath)] = []
-  var willDisplayQueryIndexPathClosure: ((String, IndexPath) -> Void)?
+  var willDisplayIndexPathReceivedIndexPath: IndexPath?
+  var willDisplayIndexPathReceivedInvocations: [IndexPath] = []
+  var willDisplayIndexPathClosure: ((IndexPath) -> Void)?
 
-  func willDisplay(query: String, indexPath: IndexPath) async {
-    willDisplayQueryIndexPathCallsCount += 1
-    willDisplayQueryIndexPathReceivedArguments = (query: query, indexPath: indexPath)
-    willDisplayQueryIndexPathReceivedInvocations.append((query: query, indexPath: indexPath))
-    willDisplayQueryIndexPathClosure?(query, indexPath)
+  func willDisplay(indexPath: IndexPath) {
+    willDisplayIndexPathCallsCount += 1
+    willDisplayIndexPathReceivedIndexPath = indexPath
+    willDisplayIndexPathReceivedInvocations.append(indexPath)
+    willDisplayIndexPathClosure?(indexPath)
   }
 
   // MARK: - didSelectItemAt

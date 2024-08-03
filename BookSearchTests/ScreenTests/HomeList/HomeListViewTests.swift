@@ -41,7 +41,7 @@ final class HomeListViewTests: XCTestCase {
 
   func test_willDisplay() async {
     // GIVEN
-    presentableListener.willDisplayQueryIndexPathClosure = { _, _ in
+    presentableListener.willDisplayIndexPathClosure = { _ in
       self.exp.fulfill()
     }
 
@@ -54,7 +54,7 @@ final class HomeListViewTests: XCTestCase {
 
     // THEN
     await fulfillment(of: [exp], timeout: 0.1)
-    XCTAssert(presentableListener.willDisplayQueryIndexPathCallsCount == 1)
+    XCTAssert(presentableListener.willDisplayIndexPathCallsCount == 1)
   }
 
 }

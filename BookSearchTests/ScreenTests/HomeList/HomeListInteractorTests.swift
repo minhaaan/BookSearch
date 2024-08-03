@@ -71,7 +71,7 @@ final class HomeListInteractorTests: XCTestCase {
 
     // WHEN
     await interactor.updateQuery(query: query)
-    await interactor.willDisplay(query: query, indexPath: IndexPath(row: 0, section: 0))
+    await interactor.willDisplay(indexPath: IndexPath(row: 0, section: 0))
 
     // THEN
     XCTAssert(bookRepo.searchPageQueryPageCallsCount == 1) // API 호출 검사
@@ -96,7 +96,7 @@ final class HomeListInteractorTests: XCTestCase {
 
     // WHEN
     await interactor.updateQuery(query: query)
-    await interactor.willDisplay(query: query, indexPath: IndexPath(row: 0, section: 0))
+    await interactor.willDisplay(indexPath: IndexPath(row: 0, section: 0))
 
     // THEN
     XCTAssert(bookRepo.searchPageQueryPageCallsCount == 0)

@@ -13,7 +13,7 @@ protocol HomeListPresentableListener: AnyObject {
 
   func updateQuery(query: String) async
   func didSelectItemAt(indexPath: IndexPath) async
-  func willDisplay(query: String, indexPath: IndexPath) async
+  func willDisplay(indexPath: IndexPath) async
 }
 
 final class HomeListView: UIView, HomeListPresentable {
@@ -132,8 +132,7 @@ extension HomeListView: UICollectionViewDataSource {
 extension HomeListView: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     Task {
-      guard let query = searchBar.text else { return }
-      await listener?.willDisplay(query: query, indexPath: indexPath)
+      await listener?.willDisplay(indexPath: indexPath)
     }
   }
 
