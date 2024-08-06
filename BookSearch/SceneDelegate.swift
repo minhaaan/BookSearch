@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let homeDependency = HomeDependency(
       repository: repository,
       imageLoader: imageLoader,
-      detailBuilder: DetailBuilder(
-        dependency: DetailDependency(
+      detailBuilder: Detail.Builder(
+        dependency: Detail.Dependency(
           repository: repository,
           imageLoader: imageLoader
         )

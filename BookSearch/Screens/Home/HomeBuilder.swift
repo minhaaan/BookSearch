@@ -10,7 +10,7 @@ import UIKit
 struct HomeDependency {
   let repository: BookRepository
   let imageLoader: ImageLoader
-  let detailBuilder: DetailBuildable
+  let detailBuilder: Detail.Buildable
 }
 
 final class HomeBuilder {

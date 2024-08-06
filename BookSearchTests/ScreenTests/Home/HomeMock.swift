@@ -33,7 +33,7 @@ final class HomePresenterMock: HomePresentable {
 
 // MARK: DetailBuilderMock
 
-final class DetailBuilderMock: DetailBuildable {
+final class DetailBuilderMock: Detail.Buildable {
   var buildCallsCount = 0
   func build(isbn13: String) -> UIViewController {
     buildCallsCount += 1

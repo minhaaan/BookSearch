@@ -7,38 +7,43 @@
 
 import UIKit
 
-struct DetailDependency {
-  let repository: BookRepository
-  let imageLoader: ImageLoader
-}
+enum Detail {}
 
-protocol DetailBuildable {
-  func build(isbn13: String) -> UIViewController
-}
-
-final class DetailBuilder: DetailBuildable {
-
-  let dependency: DetailDependency
-
-  init(dependency: DetailDependency) {
-    self.dependency = dependency
+extension Detail {
+  struct Dependency {
+    let repository: BookRepository
+    let imageLoader: ImageLoader
   }
 
-  func build(isbn13: String) -> UIViewController {
-    let viewController = DetailViewController()
-    let interactor = DetailInteractor(
-      isbn: isbn13,
-      bookRepo: dependency.repository,
-      imageLoader: dependency.imageLoader
-    )
-    let router = DetailRouter()
 
-    viewController.listener = interactor
-    viewController.router = router
-    router.viewController = viewController
-    interactor.presenter = viewController
-
-    return viewController
+  protocol Buildable {
+    func build(isbn13: String) -> UIViewController
   }
 
+  final class Builder: Buildable {
+
+    let dependency: Detail.Dependency
+
+    init(dependency: Dependency) {
+      self.dependency = dependency
+    }
+
+    func build(isbn13: String) -> UIViewController {
+      let viewController = Detail.ViewController()
+      let interactor = Detail.Interactor(
+        isbn: isbn13,
+        bookRepo: dependency.repository,
+        imageLoader: dependency.imageLoader
+      )
+      let router = Detail.Router()
+
+      viewController.listener = interactor
+      viewController.router = router
+      router.viewController = viewController
+      interactor.presenter = viewController
+
+      return viewController
+    }
+  }
 }
+

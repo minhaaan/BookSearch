@@ -17,7 +17,7 @@ protocol HomeListPresentable: AnyObject {
 
 final class HomeListInteractor: HomeListPresentableListener {
 
-  private struct PageData {
+  private struct PageData: Sendable {
     let query: String // 검색어
     let curPage: Int? // 현재 페이지
     let totalPage: Int? // 전체 페이지

@@ -10,9 +10,9 @@ import UIKit
 final class HomeRouter: HomeRoutable {
 
   weak var viewController: UIViewController?
-  let detailBuilder: DetailBuildable
+  let detailBuilder: Detail.Buildable
 
-  init(detailBuilder: DetailBuildable) {
+  init(detailBuilder: Detail.Buildable) {
     self.detailBuilder = detailBuilder
   }
 

@@ -10,14 +10,14 @@ import XCTest
 
 final class DetailViewControllerTests: XCTestCase {
 
-  var viewController: DetailViewController!
+  var viewController: Detail.ViewController!
   var router: DetailRouterMock!
   var listener: DetailPresentableListenerMock!
 
   override func setUpWithError() throws {
     router = DetailRouterMock()
     listener = DetailPresentableListenerMock()
-    viewController = DetailViewController()
+    viewController = Detail.ViewController()
     viewController.router = router
     viewController.listener = listener
   }

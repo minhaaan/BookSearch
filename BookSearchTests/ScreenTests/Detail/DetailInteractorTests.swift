@@ -10,7 +10,7 @@ import XCTest
 
 final class DetailInteractorTests: XCTestCase {
 
-  var interactor: DetailInteractor!
+  var interactor: Detail.Interactor!
   let isbn = "213213213213"
   var bookRepo: BookRepositoryMock!
   var presenter: DetailPresentableMock!
@@ -20,7 +20,7 @@ final class DetailInteractorTests: XCTestCase {
     bookRepo = BookRepositoryMock()
     presenter = DetailPresentableMock()
     imageLoader = ImageLoaderMock()
-    interactor = DetailInteractor(
+    interactor = Detail.Interactor(
       isbn: isbn,
       bookRepo: bookRepo,
       imageLoader: imageLoader

@@ -11,7 +11,7 @@ import PDFKit
 
 // MARK: - DetailPresentableMock -
 
-final class DetailPresentableMock: DetailPresentable {
+final class DetailPresentableMock: Detail.Presentable {
 
   // MARK: - updateLabelData
 
@@ -56,7 +56,7 @@ final class DetailPresentableMock: DetailPresentable {
 
 // MARK: DetailRouterMock
 
-final class DetailRouterMock: DetailRoutable {
+final class DetailRouterMock: Detail.Routable {
   var showErrorAlertCallsCount = 0
   func showErrorAlert() async {
     showErrorAlertCallsCount += 1
@@ -65,7 +65,7 @@ final class DetailRouterMock: DetailRoutable {
 
 // MARK: DetailPresentableListenerMock
 
-final class DetailPresentableListenerMock: DetailPresentableListener {
+final class DetailPresentableListenerMock: Detail.PresentableListener {
   var fetchDetailDataCallsCount = 0
   func fetchDetailData() async {
     fetchDetailDataCallsCount += 1
