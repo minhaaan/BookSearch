@@ -10,7 +10,7 @@ import Foundation
 struct SearchDTO: Codable {
   let error: String
   let total: String
-  let page: String
+  let page: String?
   let books: [Book]
 
   struct Book: Codable {

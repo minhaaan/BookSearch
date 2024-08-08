@@ -69,7 +69,7 @@ final class HomeListInteractor: HomeListPresentableListener {
         self.books = search.books
         self.pageData = PageData(
           query: query,
-          curPage: Int(search.page),
+          curPage: Int(search.page ?? search.total), // page 데이터 없으면 total
           totalPage: Int(search.total)
         )
         presenter?.updateListView()
@@ -128,7 +128,7 @@ final class HomeListInteractor: HomeListPresentableListener {
     let books = try await bookRepo.searchPage(query: query, page: nextPage)
     pageData = PageData( // 페이지 데이터 업데이트
       query: query,
-      curPage: Int(books.page),
+      curPage: Int(books.page ?? books.total),
       totalPage: Int(books.total)
     )
 
